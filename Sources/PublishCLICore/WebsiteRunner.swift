@@ -65,7 +65,7 @@ private extension WebsiteRunner {
 
     func resolveSystemPythonMajorVersionNumber() -> Int {
         // Expected output: `Python X.X.X`
-        let pythonVersionString = try? shellOut(to: "python --version")
+        let pythonVersionString = try? shellOut(to: "python3 --version")
         let fullVersionNumber = pythonVersionString?.split(separator: " ").last
         let majorVersionNumber = fullVersionNumber?.first
         return majorVersionNumber?.wholeNumberValue ?? 2
